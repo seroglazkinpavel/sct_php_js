@@ -6,35 +6,39 @@
 </head>
 <body>
 <script>
-    document.write('Программист — что это значит?\n' +
-        'Это сильный человек!\n' +
-        'Над программой не заплачет,\n' +
-        'А работать будет век,\n' +
-        'Пусть же разные программы\n' +
-        'Быстро пишутся, легко!\n' +
-        'Пусть своим умом вы сами\n' +
-        'Добиваетесь всего!');
-    let br = document.createElement('br');
-    document.body.append(br);
-    let elBr = document.createElement('br');
-    document.body.append(elBr);
-    console.log('information message 1');
-    console.info('information message 2');
-    console.warn('warning 1');
-    console.warn('warning 2');
-    console.error('mistakes 1');
-    console.error('mistakes 2');
-    console.error('mistakes 3');
-    document.write('Специально для работы с документами HTML в языке JavaScript имеется отдельный объект с названием' +
-        ' document. Пользуясь его свойствами и методами, сценарий JavaScript может получить информацию о текущем ' +
-        'документе, загруженном в окно браузера, а также управлять отображением содержимого этого документа.');
-    let br1 = document.createElement('br');
-    document.body.append(br1);
-    let elBr1 = document.createElement('br');
-    document.body.append(elBr1);
-    document.write('Объект Console служит для доступа к средствам отладки браузера (например, Web Console ' +
-        '(Веб-консоль) в Firefox). Работа с ним отличается в разных браузерах, но эти методы и свойства по факту' +
-        ' поддерживаются всеми браузерами.')
+    var a = 1;
+    var b = 2;
+    var c = 3;
+
+    let str = "Привет";
+    let str2 = 'Одинарные кавычки тоже подойдут';
+    let phrase = `Обратные кавычки позволяют встраивать переменные ${str}`;
+
+    let nameFieldChecked = true; // да, поле отмечено
+    let ageFieldChecked = false; // нет, поле не отмечено
+    let isGreater = 4 > 1;// Булевые значения также могут быть результатом сравнений
+
+    let age = null;
+
+    let age;
+    alert(age); // выведет "undefined"
+
+    // Есть еще объекты и символы
+
+    const a = 'test'
+    const myBirthday = '18.04.1982';
+    const COLOR_RED = "#F00";
+    const n = 1;
+    const num = 6;
+    const p = 3.14;
+
+    document.write('Переменная – это «именованное хранилище» для данных. Мы можем использовать переменные для хранения товаров, посетителей и других данных.\n' +
+        '\n' +
+        'Для создания переменной в JavaScript используйте ключевое слово let.');
+    // Не будет ошибкой
+    let message = "hello";
+    message = 123456;
+
 </script>
 </body>
 </html>
