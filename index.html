@@ -6,39 +6,23 @@
 </head>
 <body>
 <script>
-    var a = 1;
-    var b = 2;
-    var c = 3;
-
-    let str = "Привет";
-    let str2 = 'Одинарные кавычки тоже подойдут';
-    let phrase = `Обратные кавычки позволяют встраивать переменные ${str}`;
-
-    let nameFieldChecked = true; // да, поле отмечено
-    let ageFieldChecked = false; // нет, поле не отмечено
-    let isGreater = 4 > 1;// Булевые значения также могут быть результатом сравнений
-
-    let age = null;
-
-    let age;
-    alert(age); // выведет "undefined"
-
-    // Есть еще объекты и символы
-
-    const a = 'test'
-    const myBirthday = '18.04.1982';
-    const COLOR_RED = "#F00";
-    const n = 1;
-    const num = 6;
-    const p = 3.14;
-
-    document.write('Переменная – это «именованное хранилище» для данных. Мы можем использовать переменные для хранения товаров, посетителей и других данных.\n' +
-        '\n' +
-        'Для создания переменной в JavaScript используйте ключевое слово let.');
-    // Не будет ошибкой
-    let message = "hello";
-    message = 123456;
-
+    var x = 4;
+    var y = 2;
+    var z = 1;
+    var a = 2 * x + 3 * y - z/(3 + 2 * x);
+    var b = 13 + x/Math.pow(y, 2);
+    var c = 3 * (x + 5) - Math.pow(x, 3)/(2 * Math.pow(x, 2) + 2);
+    var d = Math.pow(b, 2) - 4 * a * c/Math.sqrt(2 * a + b);
+    var e = a + Math.sqrt(Math.pow(b, 2) - 4 * a * c)/(2 * b + 3 * a);
+    var g = (x+y) * (x +y/(Math.pow(x, 2) + x * y))/(1 + 1/(Math.pow(x, 2) + 4));
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    console.log(d);
+    console.log(e);
+    console.log(g);
+    document.write('1) Нельзя.');
+    document.write('2) Потому что при сложении числа со строкой, число превращается в строку, а две строки при сложении конкатенируются.');
 </script>
 </body>
 </html>
