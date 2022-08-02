@@ -6,23 +6,41 @@
 </head>
 <body>
 <script>
-    var x = 4;
-    var y = 2;
-    var z = 1;
-    var a = (2 * x + 3 * y - z)/(3 + 2 * x);
-    var b = (13 + x)/Math.pow(y, 2);
-    var c = (3 * (x + 5) - Math.pow(x, 3))/(2 * Math.pow(x, 2) + 2);
-    var d = (Math.pow(b, 2) - 4 * a * c)/Math.sqrt(2 * a + b);
-    var e = (a + Math.sqrt(Math.pow(b, 2) - 4 * a * c))/(2 * b + 3 * a);
-    var g = (x+y) * (x +y/(Math.pow(x, 2) + x * y))/(1 + 1/(Math.pow(x, 2) + 4));
-    console.log(a);
-    console.log(b);
-    console.log(c);
-    console.log(d);
-    console.log(e);
-    console.log(g);
-    document.write('1) Нельзя.');
-    document.write('2) Потому что при сложении числа со строкой, число превращается в строку, а две строки при сложении конкатенируются.');
+    var a = 1;
+    var b = 2;
+    var c = 3;
+    var D = Math.pow(b, 2) - 4 * a * c;
+    if (D < 0) {
+        console.log('Корней нет.')
+    } else {
+        var x1 = (-b + Math.sqrt(D))/2 * a;
+        var x2 = (-b - Math.sqrt(D))/2 * a;
+        console.log(x1);
+        console.log(x2);
+    }
+
+    var k = 5;
+    var x = 6;
+    if (k == 2 || k == 3) {
+        var y = Math.pow(x, k) + x + 1;
+        console.log(y);
+    } else if(k == 4 || k == 5 || k == 6) {
+        var y = 1/(Math.abs(x + 1));
+        console.log(y);
+    } else if(k > 7 || k < 2) {
+        var y = Math.sqrt(Math.abs(x + k)) + Math.sqrt(Math.abs(x - k));
+        console.log(y);
+    }
+    document.write('Оператор == сравнивает на равенство, а вот === — на идентичность. Плюс оператора === состоит в том, ' +
+        'что он не приводит два значения к одному типу. Именно из-за этого он обычно и используется.');
+    document.write('Логический оператор НЕ (!) (логическое отрицание) меняет логическое значение операнда с истины ' +
+        'в ложь и наоборот. Обычно он используется с булевыми (логическими) значениями. При использовании с любыми' +
+        ' другими значениями, если операнд может быть преобразован в true, то вернёт false; в противном случае он возвращается true.');
+    const a = 3;
+    const b = -2;
+
+    console.log(!(a > 0 || b > 0));
+    // expected output: false
 </script>
 </body>
 </html>
