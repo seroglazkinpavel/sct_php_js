@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 1. Разработайте функцию, которая будет подсчитывать значение в зависимости от передаваемого действия.
+    // Параметры функции: 1-ое число, 2-ое число, Действие.
+
+    var number = +prompt("Введите число: ");
+    var number_1 = +prompt("Введите второе число число: ");
+    var operation = prompt("Введите одно из действий (+,-,*,/): ");
+    function calculator(number, number_1, operation) {
+        if (operation == '+') {
+            var sum = number + number_1
+            alert(`Ваш результат равен ${sum}`)
+        } else if (operation == '-') {
+            var dif = number - number_1
+            alert(`Ваш результат равен ${dif}`)
+        } else if (operation == '*') {
+            var mult = number * number_1
+            alert(`Ваш результат равен ${mult}`)
+        } else if (operation == '/') {
+            var div = number / number_1
+            alert(`Ваш результат равен ${div}`)
+        }
+    }
+    calculator(number, number_1, operation)
+
+    // 2. Разработайте функцию, которая будет высчитать возвраст клиента по Дате рождения. Параметры функции:
+    // Дата рождения. Пример значения параметра "28.05.1997".
+
+    function birthDateToAge(b) {
+        var a = new Date(), b = new Date(b),
+        age = a.getFullYear() - b.getFullYear();
+        return age;
+    }
+    console.log(birthDateToAge("1997-5-28"))
+
+    // 3. Разработайте функцию, которая принимает строку в качестве параметра и находит самое длинное слово в строке.
+    // Параметры функции: Строка.
+
+    function myStr(line){
+        var strSplit = line.split(' ');
+        var maxWord = 0;
+        for(var i = 0; i < strSplit.length; i++){
+            if(strSplit[i].length > maxWord){
+                maxWord = strSplit[i].length;
+            }
+        }
+        return maxWord;
+    }
+    console.log(myStr('Разработайте функцию, которая принимает строку в качестве параметра и находит самое длинное слово в строке'))
+
+    document.write('a.Могут принимать "любое" количество аргументов. .\n');
+    let br1 = document.createElement('br');
+    document.body.append(br1);
+    let elBr1 = document.createElement('br');
+    document.write('b. Undefined — это примитивный тип данных, состоящий из одного значения undefined. Оно используется,' +
+        ' чтобы обозначить неизвестное или неопределённое значение. JavaScript автоматически устанавливает значение' +
+        ' undefined объявленным переменным, которые не были проинициализированы значением');
+
+</script>
+</body>
+</html>
