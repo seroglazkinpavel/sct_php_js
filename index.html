@@ -5,62 +5,40 @@
     <title>Title</title>
 </head>
 <body>
+    <button value="7" onclick="countMultiplication(this)">Нажми</button><br><br>
+    <input value="" oninput="onInput(this)" type="text"><br><br>
 <script>
-    // 1. Разработайте функцию, которая будет подсчитывать значение в зависимости от передаваемого действия.
-    // Параметры функции: 1-ое число, 2-ое число, Действие.
+    // 1.  Добавьте в html кнопку "button" со целочисленным значением в атрибуте "value", и по нажатию на эту кнопку
+    // должна вызываться функция, в которой вы получаете значение из атрибута "value" и умножаете на число(количество
+    // нажатий на эту кнопку. В первом случае на 1, во втором на 2, в третьем на 3 и т.д.) и выведите результат в консоле.
 
-    var number = +prompt("Введите число: ");
-    var number_1 = +prompt("Введите второе число число: ");
-    var operation = prompt("Введите одно из действий (+,-,*,/): ");
-    function calculator(number, number_1, operation) {
-        if (operation == '+') {
-            var sum = number + number_1
-            alert(`Ваш результат равен ${sum}`)
-        } else if (operation == '-') {
-            var dif = number - number_1
-            alert(`Ваш результат равен ${dif}`)
-        } else if (operation == '*') {
-            var mult = number * number_1
-            alert(`Ваш результат равен ${mult}`)
-        } else if (operation == '/') {
-            var div = number / number_1
-            alert(`Ваш результат равен ${div}`)
+    var count = 0;
+    function countMultiplication(value_attribute) {
+       count++;
+       console.log(count  + ' * ' + value_attribute.value + ' = ' + count * value_attribute.value);
+    }
+
+    // 2. Добавьте в html текстовое поле "input", и при каждом вводе значения в консоле выводите это значение с текстом
+    // "Значение из текстового поля: ЗНАЧЕНИЕ", и поставьте проверку, что если значение будет равен "картинка", то с
+    // помощью функции "alert" выведите какой-нибудь текст.
+
+    function onInput(element) {
+        if (element.value === 'картинка') {
+            alert('Helloy, word!')
+        } else {
+            console.log("Значение из текстового поля: " + element.value);
         }
     }
-    calculator(number, number_1, operation)
 
-    // 2. Разработайте функцию, которая будет высчитать возвраст клиента по Дате рождения. Параметры функции:
-    // Дата рождения. Пример значения параметра "28.05.1997".
-
-    function birthDateToAge(b) {
-        var a = new Date(), b = new Date(b),
-        age = a.getFullYear() - b.getFullYear();
-        return age;
-    }
-    console.log(birthDateToAge("1997-5-28"))
-
-    // 3. Разработайте функцию, которая принимает строку в качестве параметра и находит самое длинное слово в строке.
-    // Параметры функции: Строка.
-
-    function myStr(line){
-        var strSplit = line.split(' ');
-        var maxWord = 0;
-        for(var i = 0; i < strSplit.length; i++){
-            if(strSplit[i].length > maxWord){
-                maxWord = strSplit[i].length;
-            }
-        }
-        return maxWord;
-    }
-    console.log(myStr('Разработайте функцию, которая принимает строку в качестве параметра и находит самое длинное слово в строке'))
-
-    document.write('a.Могут принимать "любое" количество аргументов. .\n');
+    document.write('a.Событие mouseover происходит в момент, когда курсор оказывается над элементом, а событие mouseout' +
+        ' – в момент, когда курсор уходит с элемента. Эти события являются особенными, потому что у них имеется свойство' +
+        ' relatedTarget. Оно «дополняет» target. Когда мышь переходит с одного элемента на другой, то один из них будет ' +
+        'target, а другой relatedTarget.');
     let br1 = document.createElement('br');
     document.body.append(br1);
-    let elBr1 = document.createElement('br');
-    document.write('b. Undefined — это примитивный тип данных, состоящий из одного значения undefined. Оно используется,' +
-        ' чтобы обозначить неизвестное или неопределённое значение. JavaScript автоматически устанавливает значение' +
-        ' undefined объявленным переменным, которые не были проинициализированы значением');
+    //let elBr1 = document.createElement('br');
+    document.write('b.Заголовок не является видимым элементом для нажатия, поэтому он не может иметь поведение ' +
+        'пользовательского интерфейса, такое как события щелчка и т. Д. ');
 
 </script>
 </body>
