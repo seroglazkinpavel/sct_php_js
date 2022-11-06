@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Форма</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <button value="7" onclick="countMultiplication(this)">Нажми</button><br><br>
-    <input value="" oninput="onInput(this)" type="text"><br><br>
-<script>
-    // 1.  Добавьте в html кнопку "button" со целочисленным значением в атрибуте "value", и по нажатию на эту кнопку
-    // должна вызываться функция, в которой вы получаете значение из атрибута "value" и умножаете на число(количество
-    // нажатий на эту кнопку. В первом случае на 1, во втором на 2, в третьем на 3 и т.д.) и выведите результат в консоле.
-
-    var count = 0;
-    function countMultiplication(value_attribute) {
-       count++;
-       console.log(count  + ' * ' + value_attribute.value + ' = ' + count * value_attribute.value);
-    }
-
-    // 2. Добавьте в html текстовое поле "input", и при каждом вводе значения в консоле выводите это значение с текстом
-    // "Значение из текстового поля: ЗНАЧЕНИЕ", и поставьте проверку, что если значение будет равен "картинка", то с
-    // помощью функции "alert" выведите какой-нибудь текст.
-
-    function onInput(element) {
-        if (element.value === 'картинка') {
-            alert('Helloy, word!')
-        } else {
-            console.log("Значение из текстового поля: " + element.value);
-        }
-    }
-
-    document.write('a.Событие mouseover происходит в момент, когда курсор оказывается над элементом, а событие mouseout' +
-        ' – в момент, когда курсор уходит с элемента. Эти события являются особенными, потому что у них имеется свойство' +
-        ' relatedTarget. Оно «дополняет» target. Когда мышь переходит с одного элемента на другой, то один из них будет ' +
-        'target, а другой relatedTarget.');
-    let br1 = document.createElement('br');
-    document.body.append(br1);
-    //let elBr1 = document.createElement('br');
-    document.write('b.Заголовок не является видимым элементом для нажатия, поэтому он не может иметь поведение ' +
-        'пользовательского интерфейса, такое как события щелчка и т. Д. ');
-
-</script>
+    <form id="main-form" name="contactForm" method="post">
+        <div class="row">
+            <label for="surname">Фамилия:</label>
+            <input type="text" name="surname">
+        </div>
+        <div class="row">
+            <label for="name">Имя:</label>
+            <input type="text" name="name">
+        </div>
+        <div class="row">
+            <label for="patronymic">Отчество:</label>
+            <input type="text" name="patronymic">
+        </div>
+        <div class="row">
+            <label for="email">Email:</label>
+            <input type="text" name="email">
+        </div>
+        <div class="row">
+            <label for="mobile">Номер телефона:</label>
+            <input type="text" name="mobile" maxlength="10">
+        </div>
+        <div class="row">
+            <label for="topic">Тема вопроса:</label>
+            <input type="text" name="topic">
+        </div>
+        <div class="row">
+            <label for="desc">About:</label>
+            <textarea name="desc" id="desc"></textarea>
+        </div>
+        <div id="error-block" style="color: red;"></div>
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
+        <script src="script.js"></script>
+    </form>
 </body>
+
 </html>
