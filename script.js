@@ -14,40 +14,30 @@ function checkForm(event) {
 
     var errorMessage = '';
 
-    if (surname == '' || name == '' || patronymic == '' || topic == '') {
-        errorMessage = 'Заполните все поля.';
+    if (surname == '') {
+        errorMessage = 'Введите вашу фамилию';
     } else if (surname.length <= 1 || surname.length > 40) {
-        errorMessage = 'Введите корректную фамилию.';
+        errorMessage = 'Введите правильную фамилию';
+    } else if (name == '') {
+        errorMessage = 'Введите ваше имя';
     } else if (name.length <= 1 || name.length > 40) {
         errorMessage = 'Введите корректное имя.';
+    } else if (patronymic == '') {
+        errorMessage = 'Введите ваше отчество';
     } else if (patronymic.length <= 1 || patronymic.length > 40) {
-        errorMessage = 'Введите корректноe. отчество.';
-    }
-
-    if (email == "") {
+        errorMessage = 'Введите корректное отчество.';
+    } else if (email == "") {
         errorMessage = 'Введите адрес вашей электронной почты';
-    } else {
-        var regex = /^\S+@\S+\.\S+$/;
-        if (regex.test(email) === false) {
-            errorMessage = 'Введите действительный адрес электронной почты';
-        }
-    }
-
-    if (mobile == "") {
+    } else if (/^\S+@\S+\.\S+$/.test(email) === false) {
+        errorMessage = 'Введите действительный адрес электронной почты';
+    } else if (mobile == "") {
         errorMessage = 'Введите номер вашего мобильного телефона';
-    } else {
-        var regex = /^[1-9]\d{9}$/;
-        if (regex.test(mobile) === false) {
-            errorMessage = 'Введите действительный 10-значный номер мобильного телефона';
-        }
-    }
-    if (topic == "") {
+    } else if (/^[1-9]\d{9}$/.test(mobile) === false) {
+        errorMessage = 'Введите действительный 10-значный номер мобильного телефона';
+    } else if (topic == "") {
         errorMessage = 'Введите тему вопроса';
-    } else {
-        var regex = /^[a-zA-Z\s]+$/;
-        if (regex.test(topic) === false) {
-            errorMessage = 'Введите правильно тему вопроса';
-        }
+    } else if (/^[a-zA-Z\s]+$/.test(topic) === false) {
+        errorMessage = 'Введите правильно тему вопроса';
     }
 
     if (errorMessage !== '') {
