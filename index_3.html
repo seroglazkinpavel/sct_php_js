@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Задача 3 JavaScript</title>
+    <style>
+        input {
+            width: 200px;
+        }
+        #wrapper, #test {
+            text-align: center;
+        }
+        #test {
+            font-size: 24px;
+        }
+    </style>
+    <script>
+        //Запускает таймер
+        function go(){
+            window.timerId = window.setInterval(timer, 300);
+            document.getElementById('go').disabled = true;
+        }
+        //Останавливает таймер
+        function stop(){
+            window.clearInterval(window.timerId);
+        }
+        function timer(){
+            var test = document.getElementById('test');
+            var number = parseInt(test.innerHTML)-1;
+            test.innerHTML = number;
+            if(number == 0) {
+                stop();
+                var timetStop = document.getElementById('stop');
+                timetStop.innerHTML = 'Обратный отсчет завершен.';
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="wrapper">
+    <p id="test">
+        10
+    </p>
+    <p id="stop"></p>
+    <input type="submit" value="Запустить таймер!"  onclick="go()" id="go">
+</div>
+</body>
+</html>
