@@ -4,8 +4,48 @@
     <meta charset="utf-8">
     <title>Задача JavaScript</title>
     <script src="js/jquery-3.6.3.min.js"></script>
+    <style type="text/css">
+        .stripped {
+            background-color: yellow;
+        }
+        table,
+        td {
+            border: 1px solid #CCC;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 5px;
+            text-align: center;
+            font-family: Helvetica, Tahoma, sans-serif;
+            color: #333;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            const length = 8;
+            const tbody = document.querySelector('table > tbody');
+
+            Array.from({ length }, () => {
+                const tr = document.createElement('tr');
+                tr.classList.add('line');
+                Array.from({ length }, () => {
+                    const n = 1 + Math.random() * 100 | 0;
+                    const td = document.createElement('td');
+                    td.classList.add('box');
+                    td.innerText = n;
+                    tr.appendChild(td);
+                });
+                tbody.appendChild(tr);
+            });
+            $("table tr:nth-child(odd)").addClass("stripped");
+        })
+    </script>
 </head>
 <body>
-<div id="test" onclick="$('#test').hide()">Lorem ipsum dolor sit amet consectetuer</div>
+    <table>
+        <tbody></tbody>
+    </table>
 </body>
 </html>
