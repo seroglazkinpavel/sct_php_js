@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Задача JavaScript</title>
@@ -8,6 +9,7 @@
         .stripped {
             background-color: yellow;
         }
+
         table,
         td {
             border: 1px solid #CCC;
@@ -25,14 +27,17 @@
         $(document).ready(function () {
 
             const length = 8;
-            const tbody = document.querySelector('table > tbody');
+            //const tbody = document.querySelector('table > tbody');
+            const tbody = $('table > tbody');
 
             Array.from({ length }, () => {
-                const tr = document.createElement('tr');
+                //const tr = document.createElement('tr');
+                const tr = $('tr').appendTo('table');
                 tr.classList.add('line');
                 Array.from({ length }, () => {
                     const n = 1 + Math.random() * 100 | 0;
-                    const td = document.createElement('td');
+                    //const td = document.createElement('td');
+                    const td = $('td').appendTo('table');
                     td.classList.add('box');
                     td.innerText = n;
                     tr.appendChild(td);
@@ -43,9 +48,11 @@
         })
     </script>
 </head>
+
 <body>
     <table>
         <tbody></tbody>
     </table>
 </body>
+
 </html>
