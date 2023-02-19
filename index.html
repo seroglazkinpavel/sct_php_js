@@ -25,34 +25,39 @@
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
-
+            $('#table').html('<table><tbody></tbody></table>');
             const length = 8;
-            //const tbody = document.querySelector('table > tbody');
-            const tbody = $('table > tbody');
+            const tbody = document.querySelector('table > tbody');
+            //const tbody = $('table > tbody'); не работает?
+            //const tbody = $('#table > tbody'); не работает?
+            //const tbody = $('#table').children('tbody'); не работает?
+            //const tbody = $('tbody', '#table'); не работает?
 
             Array.from({ length }, () => {
-                //const tr = document.createElement('tr');
-                const tr = $('tr').appendTo('table');
+                const tr = document.createElement('tr');
+                //const tr = $('tr').appendTo('table');
                 tr.classList.add('line');
                 Array.from({ length }, () => {
                     const n = 1 + Math.random() * 100 | 0;
-                    //const td = document.createElement('td');
-                    const td = $('td').appendTo('table');
+                    const td = document.createElement('td');
+                    //const td = $('td').appendTo('table');
                     td.classList.add('box');
                     td.innerText = n;
                     tr.appendChild(td);
                 });
                 tbody.appendChild(tr);
             });
-            $("table tr:nth-child(odd)").addClass("stripped");
+            //$("table tr:nth-child(odd)").addClass("stripped");
         })
     </script>
 </head>
 
 <body>
-    <table>
-        <tbody></tbody>
-    </table>
+    <div id="table">
+        <!--<table>
+            <tbody></tbody>
+        </table>-->
+    </div>
 </body>
 
 </html>
