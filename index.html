@@ -27,11 +27,8 @@
         $(document).ready(function () {
             $('#table').html('<table><tbody></tbody></table>');
             const length = 8;
-            const tbody = document.querySelector('table > tbody');
-            //const tbody = $('table > tbody'); не работает?
-            //const tbody = $('#table > tbody'); не работает?
-            //const tbody = $('#table').children('tbody'); не работает?
-            //const tbody = $('tbody', '#table'); не работает?
+            //const tbody = document.querySelector('table > tbody');
+            const tbody = $('table > tbody');
 
             Array.from({ length }, () => {
                 const tr = document.createElement('tr');
@@ -43,11 +40,11 @@
                     //const td = $('td').appendTo('table');
                     td.classList.add('box');
                     td.innerText = n;
-                    tr.appendChild(td);
+                    tr.append(td);
                 });
-                tbody.appendChild(tr);
+                tbody.append(tr);
             });
-            //$("table tr:nth-child(odd)").addClass("stripped");
+
         })
     </script>
 </head>
