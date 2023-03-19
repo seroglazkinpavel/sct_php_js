@@ -1,60 +1,38 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <title>Задача JavaScript</title>
-    <script src="js/jquery-3.6.3.min.js"></script>
-    <style type="text/css">
-        .stripped {
-            background-color: yellow;
-        }
-
-        table,
-        td {
-            border: 1px solid #CCC;
-            border-collapse: collapse;
-        }
-
-        td {
-            padding: 5px;
-            text-align: center;
-            font-family: Helvetica, Tahoma, sans-serif;
-            color: #333;
-        }
-    </style>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#table').html('<table><tbody></tbody></table>');
-            const length = 8;
-            //const tbody = document.querySelector('table > tbody');
-            const tbody = $('table > tbody');
-
-            Array.from({ length }, () => {
-                const tr = document.createElement('tr');
-                //const tr = $('tr').appendTo('table');
-                tr.classList.add('line');
-                Array.from({ length }, () => {
-                    const n = 1 + Math.random() * 100 | 0;
-                    const td = document.createElement('td');
-                    //const td = $('td').appendTo('table');
-                    td.classList.add('box');
-                    td.innerText = n;
-                    tr.append(td);
-                });
-                tbody.append(tr);
-            });
-
-        })
-    </script>
-</head>
-
-<body>
-    <div id="table">
-        <!--<table>
-            <tbody></tbody>
-        </table>-->
-    </div>
-</body>
-
+    <head>
+        <meta charset="utf-8">
+        <title>Задача JavaScript</title>
+        <script src="js/jquery-3.6.3.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var arrData = $('article[data-index]');
+                for(var i = 1; i < arrData.length; i++) {
+                    var a = $('article[data-index]')[i];
+                    $('article[data-index]').each(function() {
+                        if ($(this).attr('data-index') > 28) {
+                            console.log($(this).text("Новое значение"));
+                        }
+                    });
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <!--1. Добавьте на страницу несколько абзацов с разными текстами.
+        2. К каждому абзацу добавьте атрибут data-index с любыми числовыми значениями.
+        3. В jQuery получите все элементы с атрибутами data-index и пройдитесь в цикле по каждому из них,
+        и у тех у кого значение данного атрибута больше 28 измените текст элементы на "Новое значение".-->
+        <article data-index="2">Text_2</article>
+        <article data-index="10">Text_10</article>
+        <article data-index="20">Text_20</article>
+        <article data-index="29">Text_29</article>
+        <article data-index="56">Text_56</article>
+        <article data-index="15">Text_15</article>
+        <article data-index="12">Text_12</article>
+        <article data-index="45">Text_45</article>
+        <article data-title="По умолчанию">Text</article>
+        <article data-title="По умолчанию">Text</article>
+        <article data-title="По умолчанию">Text text</article>
+    </body>
 </html>
