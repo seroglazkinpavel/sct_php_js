@@ -6,33 +6,33 @@
         <script src="js/jquery-3.6.3.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
-                var arrData = $('article[data-index]');
-                for(var i = 1; i < arrData.length; i++) {
-                    var a = $('article[data-index]')[i];
-                    $('article[data-index]').each(function() {
-                        if ($(this).attr('data-index') > 28) {
-                            console.log($(this).text("Новое значение"));
-                        }
-                    });
-                }
+                $('.par_1').css({
+				  'font-size':'24px',
+				  //'color':'blue',
+				  //'font-weight':'700'
+				}); 
+
+				$('.par_2').css({
+				  'font-size':'18px',
+				  //'color':'blue',
+				  //'font-weight':'700'
+				});
+				$('*').css({'color':'blue','font-weight':'700'});
             })
         </script>
     </head>
     <body>
         <!--1. Добавьте на страницу несколько абзацов с разными текстами.
-        2. К каждому абзацу добавьте атрибут data-index с любыми числовыми значениями.
-        3. В jQuery получите все элементы с атрибутами data-index и пройдитесь в цикле по каждому из них,
-        и у тех у кого значение данного атрибута больше 28 измените текст элементы на "Новое значение".-->
-        <article data-index="2">Text_2</article>
-        <article data-index="10">Text_10</article>
-        <article data-index="20">Text_20</article>
-        <article data-index="29">Text_29</article>
-        <article data-index="56">Text_56</article>
-        <article data-index="15">Text_15</article>
-        <article data-index="12">Text_12</article>
-        <article data-index="45">Text_45</article>
-        <article data-title="По умолчанию">Text</article>
-        <article data-title="По умолчанию">Text</article>
-        <article data-title="По умолчанию">Text text</article>
+        2. К половине абзацев добавьте класс "par_1", а ко второй "par_2".
+        3. В jQuery укажите стили для "par_1" - Шрифт: 24px, синего цвета, жирный шрифт.
+        4. В jQuery укажите стили для "par_2" - Шрифт: 18px, цвет шрифта брать из первого элемента с классом "par_1", жирный шрифт.-->
+        <article class="par_1">Text_2</article>
+        <article class="par_1">Text_10</article>
+        <article class="par_1">Text_20</article>
+        <article class="par_1">Text_29</article>
+        <article class="par_2">Text_56</article>
+        <article class="par_2">Text_15</article>
+        <article class="par_2">Text_12</article>
+        <article class="par_2">Text_45</article>
     </body>
 </html>
