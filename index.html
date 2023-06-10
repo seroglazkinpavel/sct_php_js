@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Задача JavaScript</title>
-        <script src="js/jquery-3.6.3.min.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $('.par_1').css({
-				  'font-size':'24px',
-				  //'color':'blue',
-				  //'font-weight':'700'
-				}); 
+<head>
+    <meta charset="utf-8">
+    <title>Задача JavaScript</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.par_1').css({
+                'font-size': '24px',
+                'color':'blue',
+                'font-weight':'700'
+            });
 
-				$('.par_2').css({
-				  'font-size':'18px',
-				  //'color':'blue',
-				  //'font-weight':'700'
-				});
-				$('*').css({'color':'blue','font-weight':'700'});
-            })
-        </script>
-    </head>
-    <body>
-        <!--1. Добавьте на страницу несколько абзацов с разными текстами.
-        2. К половине абзацев добавьте класс "par_1", а ко второй "par_2".
-        3. В jQuery укажите стили для "par_1" - Шрифт: 24px, синего цвета, жирный шрифт.
-        4. В jQuery укажите стили для "par_2" - Шрифт: 18px, цвет шрифта брать из первого элемента с классом "par_1", жирный шрифт.-->
-        <article class="par_1">Text_2</article>
-        <article class="par_1">Text_10</article>
-        <article class="par_1">Text_20</article>
-        <article class="par_1">Text_29</article>
-        <article class="par_2">Text_56</article>
-        <article class="par_2">Text_15</article>
-        <article class="par_2">Text_12</article>
-        <article class="par_2">Text_45</article>
-    </body>
+            $('.par_2').css({
+                'font-size': '18px',
+                //'color':'blue',
+                //'font-weight':'700'
+            });
+            //$('*').css({'color': 'blue', 'font-weight': '700'});
+            $('.par_2').css('color', function () {
+                return $('.par_1').color();
+            });
+
+            $('.par_2').css('font-weight', function(){
+                return $('.par_1').fontWeight();
+            });
+        })
+    </script>
+</head>
+<body>
+<!--1. Добавьте на страницу несколько абзацов с разными текстами.
+2. К половине абзацев добавьте класс "par_1", а ко второй "par_2".
+3. В jQuery укажите стили для "par_1" - Шрифт: 24px, синего цвета, жирный шрифт.
+4. В jQuery укажите стили для "par_2" - Шрифт: 18px, цвет шрифта брать из первого элемента с классом "par_1", жирный шрифт.-->
+<article class="par_1">Text_2</article>
+<article class="par_1">Text_10</article>
+<article class="par_1">Text_20</article>
+<article class="par_1">Text_29</article>
+<article class="par_2">Text_56</article>
+<article class="par_2">Text_15</article>
+<article class="par_2">Text_12</article>
+<article class="par_2">Text_45</article>
+</body>
 </html>
