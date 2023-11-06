@@ -12,18 +12,13 @@
                 'font-weight':'700'
             });
 
-            $('.par_2').css({
-                'font-size': '18px',
-                //'color':'blue',
-                //'font-weight':'700'
-            });
-            //$('*').css({'color': 'blue', 'font-weight': '700'});
+            $('.par_2').css('font-size', '18px');
             $('.par_2').css('color', function () {
-                return $('.par_1').color();
+                return $('.par_1').css('color');
             });
 
             $('.par_2').css('font-weight', function(){
-                return $('.par_1').fontWeight();
+                return $('.par_1').css('font-weight');
             });
         })
     </script>
@@ -32,7 +27,8 @@
 <!--1. Добавьте на страницу несколько абзацов с разными текстами.
 2. К половине абзацев добавьте класс "par_1", а ко второй "par_2".
 3. В jQuery укажите стили для "par_1" - Шрифт: 24px, синего цвета, жирный шрифт.
-4. В jQuery укажите стили для "par_2" - Шрифт: 18px, цвет шрифта брать из первого элемента с классом "par_1", жирный шрифт.-->
+4. В jQuery укажите стили для "par_2" - Шрифт: 18px, цвет шрифта брать из первого элемента с классом "par_1",
+жирный шрифт.-->
 <article class="par_1">Text_2</article>
 <article class="par_1">Text_10</article>
 <article class="par_1">Text_20</article>
