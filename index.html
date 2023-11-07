@@ -6,36 +6,31 @@
     <script src="js/jquery-3.6.3.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('.par_1').css({
-                'font-size': '24px',
-                'color':'blue',
-                'font-weight':'700'
-            });
+            $('.div_1').append('<p>Text1</p><p>Text2</p><p>Text3</p>');
 
-            $('.par_2').css('font-size', '18px');
-            $('.par_2').css('color', function () {
-                return $('.par_1').css('color');
-            });
-
-            $('.par_2').css('font-weight', function(){
-                return $('.par_1').css('font-weight');
+            $('.div_1').append("<ul>" +
+                "<li>'Иванов И.И.'</li><li>'Петров П.П.'</li><li>'Сидоров С.С.'</li>" +
+                "</ul>");
+            $('ul').prepend("<li>'Белов Б.Б.'</li><li>Соколов С.С.</li>");
+            $('ul').append("<li>'Кравченко К.К.'</li><li>'Суриков В.В.'</li>")
+            $('ul').children().each(function(){
+                if ($(this).text() == 'Орлов О.О.') {
+                    $(this).remove();
+                }
             });
         })
     </script>
 </head>
 <body>
-<!--1. Добавьте на страницу несколько абзацов с разными текстами.
-2. К половине абзацев добавьте класс "par_1", а ко второй "par_2".
-3. В jQuery укажите стили для "par_1" - Шрифт: 24px, синего цвета, жирный шрифт.
-4. В jQuery укажите стили для "par_2" - Шрифт: 18px, цвет шрифта брать из первого элемента с классом "par_1",
-жирный шрифт.-->
-<article class="par_1">Text_2</article>
-<article class="par_1">Text_10</article>
-<article class="par_1">Text_20</article>
-<article class="par_1">Text_29</article>
-<article class="par_2">Text_56</article>
-<article class="par_2">Text_15</article>
-<article class="par_2">Text_12</article>
-<article class="par_2">Text_45</article>
+<!--1. Создайте новую ветку с названием lesson_19. Далее все файлы урока сохраняйте в этой ветке.
+2. Добавьте на страницу несколько абзацов с разными текстами.
+3. На странице создайте список ul, со списком учеников.
+4. В jQuery с помощью методов изученных в данном уроке, добавьте еще по паре учеников, как в начале списка, так и в конце.
+5. Удалите со списка ученика "Орлов О.О.".-->
+
+<div class="div_1">
+
+</div>
+
 </body>
 </html>
