@@ -9,13 +9,13 @@
             $('.div_1').append('<p>Text1</p><p>Text2</p><p>Text3</p>');
 
             $('.div_1').append("<ul>" +
-                "<li>'Иванов И.И.'</li><li>'Петров П.П.'</li><li>'Сидоров С.С.'</li>" +
+                "<li>Иванов И.И.</li><li>Петров П.П.</li><li>Сидоров С.С.</li>" +
                 "</ul>");
-            $('ul').prepend("<li>'Белов Б.Б.'</li><li>'Соколов С.С.'</li>");
-            $('ul').append("<li>'Кравченко К.К.'</li><li>'Суриков В.В.'</li><li>'Орлов О.О.'</li>")
+            $('ul').prepend("<li>Белов Б.Б.</li><li>Соколов С.С.</li>");
+            $('ul').append("<li>Кравченко К.К.</li><li>Суриков В.В.</li><li>Орлов О.О.</li>")
             $('ul').children().each(function(){
-                if ($('li:contains("Орлов О.О.")')) {
-                    $('li:contains("Орлов О.О.")').remove();
+                if ($(this).text() === "Орлов О.О.") {
+                    $(this).remove();
                 }
             });
         })
