@@ -1,0 +1,111 @@
+a:2:{s:4:"data";s:5149:"<li>
+    <a href="/category/луковичные">ЛУКОВИЧНЫЕ</a>
+    </li><li>
+    <a href="/category/мголетники">МНОГОЛЕТНИКИ</a>
+            <ul>
+            <li>
+    <a href="/category/lilii"><img src="/app/web/images/lilii.jpg">лилии</a>
+    </li><li>
+    <a href="/category/georginy"><img src="/app/web/images/georginy.jpg">георгины</a>
+    </li><li>
+    <a href="/category/gladiolus"><img src="/app/web/images/gladiolus.jpg">гладиолус</a>
+    </li><li>
+    <a href="/category/krokusy"><img src="/app/web/images/krokusy.jpeg">крокусы</a>
+    </li><li>
+    <a href="/category/tyulpany"><img src="/app/web/images/tyulpany.jpeg">тюльпаны</a>
+    </li><li>
+    <a href="/category/iris-lukovichny"><img src="/app/web/images/iris-lukovichny.jpg">ирис луковичный</a>
+    </li><li>
+    <a href="/category/gippeastrum"><img src="/app/web/images/gippeastrum.jpg">гиппеаструм (амариллист)</a>
+    </li><li>
+    <a href="/category/gloksinii"><img src="/app/web/images/gloksinii.jpeg">глоксинии</a>
+    </li><li>
+    <a href="/category/lyutiki"><img src="/app/web/images/lyutiki.jpeg">лютики</a>
+    </li><li>
+    <a href="/category/begoniya"><img src="/app/web/images/begoniya.jpg">бегония</a>
+    </li><li>
+    <a href="/category/nartsissy"><img src="/app/web/images/nartsissy.jpeg">нарциссы</a>
+    </li><li>
+    <a href="/category/giatsinty"><img src="/app/web/images/giatsinty.jpeg">гиацинты</a>
+    </li><li>
+    <a href="/category/kalla"><img src="/app/web/images/kalla.jpg">калла</a>
+    </li><li>
+    <a href="/category/raznolukovichnye"><img src="/app/web/images/raznolukovichnye.jpg">разнолуквичные</a>
+    </li><li>
+    <a href="/category/allium"><img src="/app/web/images/allium.jpeg">аллиум</a>
+            <ul>
+            <li>
+    <a href="/category/Lily From the hybrids">Лилии От гибриды</a>
+            <ul>
+            <li>
+    <a href="/category/Bukhara irise">Бухарский ирис</a>
+    </li><li>
+    <a href="/category/Dutch irises">Голладские ирисы</a>
+    </li><li>
+    <a href="/category/Dunford">Донфорда</a>
+    </li><li>
+    <a href="/category/Netted irises">Сетчатые ирисы</a>
+    </li>        </ul>
+    </li><li>
+    <a href="/category/Asian lilies">Азиатские лилии</a>
+    </li><li>
+    <a href="/category/Tiger lilies">Лилии тигровые</a>
+    </li><li>
+    <a href="/category/Lilies of LA hybrida">Лилии ЛА гибриды</a>
+    </li><li>
+    <a href="/category/Oriental lilies">Восточные лилии</a>
+    </li>        </ul>
+    </li><li>
+    <a href="/category/fritillyariya"><img src="/app/web/images/fritillyariya.jpeg">фритиллярия</a>
+            <ul>
+            <li>
+    <a href="/category/Георгины бахромчатые">Георгины бахромчатые</a>
+    </li><li>
+    <a href="/category/Decorative dahlias">Георгины декоративные</a>
+    </li><li>
+    <a href="/category/Cactus dahlias">Георгины кактусовые</a>
+    </li>        </ul>
+    </li><li>
+    <a href="/category/muskari"><img src="/app/web/images/muskari.jpeg">мускари</a>
+            <ul>
+            <li>
+    <a href="/category/Gladioli large-flowered">Гладиолусы групноцветковые</a>
+    </li>        </ul>
+    </li><li>
+    <a href="/category/bezvremennik"><img src="/app/web/images/bezvremennik.jpeg">безвременник</a>
+            <ul>
+            <li>
+    <a href="/category/Crocuses botanical">Крокусы ботанические</a>
+    </li><li>
+    <a href="/category/Large-flowered crocuses">Крокусы крупноцветковые</a>
+    </li><li>
+    <a href="/category/Autumn-flowering crocuses">Крокусы осеннецветущие</a>
+    </li>        </ul>
+    </li><li>
+    <a href="/category/kanna "><img src="/app/web/images/kanna.jpeg">канна</a>
+            <ul>
+            <li>
+    <a href="/category/Fringed">Бахромчатые</a>
+    </li><li>
+    <a href="/category/Terry towels">Махровые</a>
+    </li><li>
+    <a href="/category/Many">Многоцветковые</a>
+    </li><li>
+    <a href="/category/Parakeets">Попугайные</a>
+    </li><li>
+    <a href="/category/Triumph">Триумф</a>
+    </li><li>
+    <a href="/category/Liliaceae">Лилиецветные</a>
+    </li>        </ul>
+    </li>        </ul>
+    </li><li>
+    <a href="/category/декораеивные кустарники">ДЕКОРАТИВНЫЕ КУСТАРНИКИ</a>
+    </li><li>
+    <a href="/category/хвойные">ХВОЙНЫЕ</a>
+    </li><li>
+    <a href="/category/розы">РОЗЫ</a>
+    </li><li>
+    <a href="/category/плодовые">ПЛОДОВЫЕ</a>
+    </li><li>
+    <a href="/category/сопутствующие товары">СОПУТСТВУЮЩИЕ ТОВАРЫ</a>
+    </li>";s:8:"end_time";i:1700491839;}
