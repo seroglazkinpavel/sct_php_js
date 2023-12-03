@@ -41,13 +41,13 @@ class UserOperations
 		if ($role === self::RoleUser) {
 			$list[] = [
 				'title' => 'Игра',
-				'link' => '/user/game'
+				'link' => '/game/play'
 			];
 		}
 		if ($role === self::RoleAdmin) {
 			$list[] = [
 				'title' => 'Игра',
-				'link' => '/user/game'
+				'link' => '/game/play'
 			];
 		}
         if ($role === self::RoleAdmin) {

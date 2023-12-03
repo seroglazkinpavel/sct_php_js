@@ -6,8 +6,6 @@ namespace app\controllers;
 use app\core\InitController;
 use app\lib\UserOperations;
 use app\models\UsersModel;
-use app\models\AdminOrderModels;
-use app\models\CartModels;
 
 
 class UserController extends InitController
@@ -41,6 +39,13 @@ class UserController extends InitController
                         'roles' => [UserOperations::RoleAdmin],
                         'matchCallback' => function () {
                             $this->redirect('/user/login');
+                        }
+                    ],
+					[
+                        'actions' => ['game'],
+                        'roles' => [UserOperations::RoleUser, UserOperations::RoleAdmin],
+                        'matchCallback' => function () {
+                            $this->redirect('/user/game');
                         }
                     ]
                 ]
@@ -289,22 +294,4 @@ class UserController extends InitController
         ]);
     }
 
-    /**
-     * Вывод страницы "Игра"
-     */
-    public function actionGame()
-    {
-        $this->view->title = 'Игра';
-		/*if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['count'])) {
-			$count = !empty($_POST['count']) ? $_POST['count'] : null;
-		}*/
-		/*var_dump($_POST);
-		die;*/
-
-        $this->render('game', [
-            'sidebar' => UserOperations::getMenuLinks(),
-            'role' => UserOperations::getRoleUser(),
-			/*'count' => $count*/
-        ]);
-    }
 }
