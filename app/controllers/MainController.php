@@ -30,13 +30,6 @@ class MainController extends InitController
                 $error_message = $result_auth['error_message'];
             }
         }
-        $userModel = new GameModel();
-        $users = $userModel->get_list_users(); // массив пользователей кто играл
-        // foreach($users as $row){
-        //     echo "<pre>";
-        //        print_r($row);
-        //     echo "</pre>";
-        // }die;
 
         $value = !empty($_POST['ochenka']) ? (int)$_POST['ochenka'] : null;
         $user_id = !empty($_GET['id']) ? (int)$_GET['id'] : null;
@@ -50,25 +43,20 @@ class MainController extends InitController
 
         $ratingModel = new MainsModels();
         $count_users = $ratingModel->get_count_game();
- 
+
+        $rating_users = $ratingModel->getRating();
+
         // Объеденим массив игроков с оценкой рейтинга и кол-во проголосовавших
         $products = array();
-        foreach ($users as $row) {
-            $rating = $this->get_rating($row['id']);
-            $count_rating = count($this->get_all_array_rating($row['id']));
+        foreach ($rating_users as $row) {
+            $rating = $ratingModel->get_rating($row['id']);
+            $count_rating = count($ratingModel->get_all_array_rating($row['id']));
             $width = $rating * 40;
             $products[] = array(
-                'user' => $row, 'rating' => $rating, 'count_rating' => $count_rating, 'width' => $width);
+                'rating_users' => $row, 'count_rating' => $count_rating, 'width' => $width
+            );
         }
-        // foreach($products as $row){
-        //     echo "<pre>";
-        //        print_r($row);
-        //     echo "</pre>";
-        // }die;
-        // $products_usort = usort($products, "cmp");
-        // var_dump($products_usort);die;
-        // $top_products = array_reverse($products_usort);
-
+ 
         $this->render('main', [
             'error_message' => $error_message,
             'err_mes'=> $err_mes,
@@ -77,46 +65,16 @@ class MainController extends InitController
         ]);
     }
 
-    /**
-     * Метод для сортировки
-     */
-    public function cmp($a, $b) {
-        return strnatcmp($a['rating'], $b['rating']);
-    }
-
-    /**
-     * Метод по выводу среднего значения
-     * 
-     * @param integer $id - $user_id пользователя
-     * @return float - среднее число
-     */
-    public function get_rating($id) {
-        $all_ratings = $this->get_all_array_rating($id);
-        //Рассчет среднего балла
-        if (!empty($all_ratings)) {
-            //Сумма всех наших оценок
-            $total_rating = 0;
-            for($i = 0; $i < count($all_ratings); $i++){
-                $total_rating += $all_ratings[$i]['value'];
-            }
-            return round($total_rating / count($all_ratings), 1);
-        } else return 0;
-    }
-
-    public function get_all_array_rating($id) {
-        //Подгрузим все наши оценки
-        $ratingModel = new MainsModels();
-        $ratings = $ratingModel->getListRating();
-
-        //Массив со всеми оценками
-        $all_ratings = array();
-
-        //Отфильтруем оценки
-        foreach ($ratings as $row) {
-            if ($row['user_id'] == $id) {
-                $all_ratings[] = $row;
-            }
-        }
-        return $all_ratings;
-    }
+    // public function actionAdd()
+    // {
+    // //     // $value = !empty($_POST['ochenka']) ? (int)$_POST['ochenka'] : null;
+    // //     // $user_id = !empty($_GET['id']) ? (int)$_GET['id'] : null;
+    // //     // var_dump($value);
+    //     if(isset($_POST['ochenka'])) {
+    //         $ochenka = $_POST['ochenka'];
+    //         // Дальнейшая обработка выбранного значения цвета
+    //         // ...
+    //         echo "Выбранная цифра: " . $ochenka;
+    //     }
+    // }
 }

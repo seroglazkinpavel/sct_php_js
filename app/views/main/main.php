@@ -70,19 +70,19 @@
             <?php for ($i = 0; $i < count($products); $i++): ?>
                 <li>
                     <div class="div_li_rating">
-                        <?=$products[$i]['user']['login']; ?>
+                        <?=$products[$i]['rating_users']['login']; ?>
                     </div>
                     <div class="div_li_rating right_div">
                         <div class="stars">
-                            <p>Средняя оценка  <?=$products[$i]['rating'];?> проголосовало <?=$products[$i]['count_rating'];?></p>
+                            <p>Средняя оценка  <?=$products[$i]['rating_users']['value'];?> проголосовало <?=$products[$i]['count_rating'];?></p>
                             <div class="point">
                                 <div id="point" style="width: <?=$products[$i]['width']?>px;"></div>
                             </div>
                         </div>
-                        <form action="/main/index?id=<?=$products[$i]['user']['id']; ?>" method="post" class="rating_form">
-                            <p>Кол-во баллов: <?=$products[$i]['user']['qty'];?></p>
+                        <form action="/main/index?id=<?=$products[$i]['rating_users']['id']; ?>" method="post" class="rating_form">
+                            <p>Кол-во баллов: <?=$products[$i]['rating_users']['qty'];?></p>
                             <label>Оценка</label>
-                            <select name="ochenka">
+                            <select name="ochenka" class="ochenka">
                                 <option value=""></option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
